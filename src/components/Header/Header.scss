@@ -32,17 +32,26 @@
           li {
                list-style: none;
                padding: 20px 30px;
+               font-size: 35px;
+               color: $main-color;
+               font-family: $font-family-Josefin;
+          }
+     }
 
-               a {
-                    color: #fff;
-                    text-decoration: none;
-                    font-size: 17px;
-                    font-family: OpenSans-CondLight, sans-serif;
-                    font-size: 14px;
-                    line-height: 23px;
-                    text-transform: uppercase;
-                    letter-spacing: .36em;
-               }
+     .account-icon {
+          position: absolute;
+          right: 200px;
+
+          .account-wrapp {
+               width: 65px;
+               height: 65px;
+               border: 2px solid $border-color;
+               display: flex;
+               align-items: center;
+               justify-content: center;
+               border-radius: 50%;
+               font-size: 22px;
+               cursor: pointer;
           }
      }
 
@@ -64,7 +73,8 @@
           color: #fff;
           font-family: $font-family-Josefin;
           transition: 0.3s linear;
-          &.showSidebar{
+
+          &.showSidebar {
                right: 0;
           }
 
@@ -109,9 +119,6 @@
                a {
                     font-size: 20px;
                     margin: 20px 0;
-
-                    
-               
                }
           }
      }

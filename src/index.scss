@@ -1,17 +1,58 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Miniver&family=Monoton&family=Open+Sans&display=swap');
-*{
+
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
-a{
+
+a {
   text-decoration: none;
-  color: inherit;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #715b3e;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(201, 171, 129);
+  border-radius: 5px;
+}
+
+@font-face {
+  font-family: 'metropolis';
+  src: url('../../../public/fonts/Metropolis1920.ttf');
 }
 
 $border-color: #715b3e;
+$main-color: rgb(201, 171, 129);
 $font-family-OpenSans: 'Open Sans', sans-serif;
 $font-family-Miniver: 'Miniver', cursive;
 $font-family-Josefin: 'Josefin Sans', sans-serif;
-$font-family-Monoton:  'Monoton', cursive;
+$font-family-Monoton: 'Monoton', cursive;
+$font-family-Metropolis: 'metropolis', sans-serif;
 $font-size: 16px;
+
+
+
+.fade-enter {
+  opacity: 0;
+}
+
+.fade-enter-active {
+  opacity: 1;
+  transition: opacity 500ms;
+}
+
+.fade-exit {
+  opacity: 1;
+}
+
+.fade-exit-active {
+  opacity: 0;
+  transition: opacity 500ms;
+}

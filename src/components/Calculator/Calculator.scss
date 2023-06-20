@@ -1,0 +1,49 @@
+@import '../../index.scss';
+
+.calculator {
+     width: 40%;
+     height: 100%;
+     z-index: 99;
+     padding: 0px 10px;
+     font-family: $font-family-Josefin;
+
+     .title {
+          color: $main-color;
+          font-size: 35px;
+     }
+
+     .calc-table {
+          width: 100%;
+          color: #fff;
+          font-family: $font-family-Josefin;
+          border: 1px solid rgb(201, 171, 129);
+
+
+          thead {
+               th {
+                    font-size: 22px;
+                    padding: 5px;
+                    text-align: center;
+               }
+          }
+
+          tbody {
+               td {
+                    padding: 5px;
+                    text-align: center;
+               }
+          }
+     }
+
+     .total__price {
+          width: 100%;
+          height: 70px;
+          border-top: 1px solid $main-color;
+
+          p {
+               color: $main-color;
+               font-size: 22px;
+          }
+     }
+
+}

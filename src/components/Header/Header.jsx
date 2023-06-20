@@ -1,46 +1,37 @@
 import "./Header.scss";
 import { HiOutlineBars3BottomRight } from "react-icons/hi2";
 import { AiOutlineClose } from "react-icons/ai";
+import { FaUserAlt } from "react-icons/fa";
 import { useState } from "react";
+import { Link } from "react-router-dom";
+
 const Header = () => {
   const [showSidebar, setShowSidebar] = useState(false);
   return (
     <div className="header">
       <div className="logo">LOGO</div>
       <ul className="navlist">
-        <li>
-          <a href="" className="nav-link">
-            Home
-          </a>
-        </li>
-        <li>
-          <a href="" className="nav-link">
-            Pages
-          </a>
-        </li>
-        <li>
-          <a href="" className="nav-link">
-            Portfoilo
-          </a>
-        </li>
-        <li>
-          <a href="" className="nav-link">
-            Blog
-          </a>
-        </li>
-        <li>
-          <a href="" className="nav-link">
-            Shop
-          </a>
-        </li>
+        <li>The Finest Drinks</li>
       </ul>
-      <div className="navbar_toggle_btn" onClick={()=>setShowSidebar(true)}>
+
+      <div className="account-icon">
+        <Link to={'/account'}>
+          <div className="account-wrapp">
+            <FaUserAlt style={{ color: "rgb(201, 171, 129)" }} />
+          </div>
+        </Link>
+      </div>
+
+      <div className="navbar_toggle_btn" onClick={() => setShowSidebar(true)}>
         <HiOutlineBars3BottomRight />
       </div>
       <div className={`sideBar ${showSidebar ? "showSidebar" : ""}`}>
         <div className="sideBar-wrap">
           <div className="close-menu">
-            <AiOutlineClose className="close-icon"  onClick={()=>setShowSidebar(false)}/>
+            <AiOutlineClose
+              className="close-icon"
+              onClick={() => setShowSidebar(false)}
+            />
           </div>
           <div className="logo">Logo</div>
           <div className="info">

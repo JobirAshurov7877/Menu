@@ -1,22 +1,17 @@
+import { CSSTransition } from "react-transition-group";
 import "./Home-slider.scss";
-import AOS from "aos";
 import "aos/dist/aos.css";
-import { useEffect } from "react";
+import { Link } from "react-router-dom";
 
 const HomeSlider = () => {
-  useEffect(() => {
-    AOS.init();
-  }, []);
-
-
   return (
     <div className="slider-content">
       <div className="slider-content-wrap">
-        <h5 data-aos="fade-down" data-aos-duration="2000">
-          welcome to our delicious corner
-        </h5>
+        <CSSTransition>
+          <h5>welcome to our delicious corner</h5>
+        </CSSTransition>
         <div className="slider-main-text">
-          <h1 >The Finest Drinks</h1>
+          <h1>The Finest Drinks</h1>
         </div>
         <p>
           From the delicious food to wonderful cocktails, Laurent’s offer is
@@ -24,11 +19,11 @@ const HomeSlider = () => {
         </p>
       </div>
       <div className="slider-btn">
-        <a  href="#">
-        <span className="btn-before-line" style={{height: '51.6px'}}></span>
-        <span className="btn-text">View More</span>
-        <span className="btn-after-line" style={{height: '51.6px'}}></span>
-        </a>
+        <Link to={'/catalog'}>
+          <span className="btn-before-line" style={{ height: "51.6px" }}></span>
+          <span className="btn-text">Menu</span>
+          <span className="btn-after-line" style={{ height: "51.6px" }}></span>
+        </Link>
       </div>
     </div>
   );

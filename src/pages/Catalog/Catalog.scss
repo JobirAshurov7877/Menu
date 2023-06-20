@@ -1,0 +1,78 @@
+@import '../../index.scss';
+
+
+
+.catalog {
+     background: url("../../assets/images/main-img-4.jpg") no-repeat center;
+     background-size: cover;
+     position: fixed;
+     left: 0;
+     top: 0;
+     width: 100%;
+     height: 100%;
+
+     a {
+          text-decoration: none;
+     }
+
+     .catalog-container {
+          height: 100vh;
+          color: #fff;
+          overflow-y: auto;
+          width: 60%;
+
+
+          .title {
+               font-family: $font-family-Metropolis;
+               color: rgb(201, 171, 129);
+               font-size: 48px;
+               letter-spacing: 5px;
+          }
+
+
+
+     }
+
+
+     .catalog-container::-webkit-scrollbar {
+          width: 10px;
+     }
+
+     .catalog-container::-webkit-scrollbar-track {
+          background: $border-color;
+     }
+
+     .catalog-container::-webkit-scrollbar-thumb {
+          background: $main-color;
+          border-radius: 5px;
+     }
+
+
+     .overlay {
+          position: fixed;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          -webkit-backdrop-filter: blur(15px);
+          backdrop-filter: blur(15px);
+          z-index: -9;
+     }
+}
+
+.catalog-card {
+     width: 350px;
+     height: 290px;
+     border: 1px solid rgba(251, 251, 251, 0.397);
+     box-shadow: 0px 0px 2px 1px #ffffff4a;
+     border-radius: 10px;
+     color: rgb(201, 171, 129);
+     cursor: pointer;
+
+     .category {
+          h4 {
+               font-family: $font-family-Josefin;
+               font-size: 26px;
+          }
+     }
+}
